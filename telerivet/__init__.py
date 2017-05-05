@@ -147,7 +147,7 @@ class API:
 
         try:
             res = response.json()
-        except ValueError, e:
+        except ValueError as e:
             raise IOError("Unexpected response from Telerivet API (HTTP {}): {}".format(response.status_code, response.content))
 
         if "error" in res:
